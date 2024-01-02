@@ -1,33 +1,34 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { 
-    createDrawerNavigator,
     DrawerItem,
     DrawerContentScrollView,
     DrawerContentComponentProps,
   } from '@react-navigation/drawer';
+import IconIonicon from 'react-native-vector-icons/Ionicons';
+import IconMaterialCommunity from 'react-native-vector-icons/MaterialCommunityIcons';
+import IconAntDesign from 'react-native-vector-icons/AntDesign';
 
-const iconHome = require('./assets/favicon.png')
 
 const drawerData = [
     {
       name: 'Home',
-      icon: iconHome,
+      icon: <IconIonicon name="home-outline" size={30} color="#900" style={{ fontSize: 24, color: '#7F35B6' }} />,
     },
     {
-      name: 'Calendar',
-      icon: iconHome,
+      name: 'Reservation',
+      icon: <IconMaterialCommunity name="table-account" size={30} color="#900" style={{ fontSize: 24, color: '#7F35B6' }} />,
     },
     {
-      name: 'Grids',
-      icon: iconHome,
+      name: 'PlayStation',
+      icon: <IconMaterialCommunity name="sony-playstation" size={30} color="#900" style={{ fontSize: 24, color: '#7F35B6' }} />,
     },
     {
-      name: 'Pages',
-      icon: iconHome,
+      name: 'Account',
+      icon: <IconMaterialCommunity name="account-circle" size={30} color="#900" style={{ fontSize: 24, color: '#7F35B6' }} />,
     },
     {
-      name: 'Components',
-      icon: iconHome,
+      name: 'History',
+      icon: <IconMaterialCommunity name="history-toggle-off" size={30} color="#900" style={{ fontSize: 24, color: '#7F35B6' }} />,
     },
   ];
   
@@ -52,10 +53,7 @@ export function CustomDrawerContent(props: DrawerContentComponentProps) {
             label={() => (
               <View
                 style={styles.menuLabelFlex}>
-                <Image
-                  style={{ width: 20, height: 20}}
-                  source={item.icon}
-                />
+                {item.icon}
                 <Text style={styles.menuTitle}>{item.name}</Text>
               </View>
             )}
@@ -66,10 +64,7 @@ export function CustomDrawerContent(props: DrawerContentComponentProps) {
         <DrawerItem
           label={() => (
             <View style={styles.menuLabelFlex}>
-              <Image
-                style={{ width: 20, height: 20}}
-                source={iconHome}
-              />
+              <IconIonicon name="game-controller" size={30} color="#900" style={{ fontSize: 24, color: '#7F35B6' }} />
               <Text style={styles.menuTitle}>Blog</Text>
             </View>
           )}
@@ -79,14 +74,11 @@ export function CustomDrawerContent(props: DrawerContentComponentProps) {
         <DrawerItem
           label={() => (
             <View style={styles.menuLabelFlex}>
-              <Image
-                style={{ width: 20, height: 20}}
-                source={iconHome} 
-              />
+              <IconAntDesign name="contacts" size={30} color="#900" style={{ fontSize: 24, color: '#7F35B6' }} />
               <Text style={styles.menuTitle}>Settings</Text>
             </View>
           )}
-          onPress={() => props.navigation.navigate('Calendar')}
+          onPress={() => props.navigation.navigate('Contacts')}
         />
       </DrawerContentScrollView>
     );
@@ -95,7 +87,7 @@ export function CustomDrawerContent(props: DrawerContentComponentProps) {
 const styles = StyleSheet.create({
 menuTitle: {
     marginLeft: 10,
-    color: '#fff'
+    color: 'black'
 },
 menuLabelFlex: {
     display: 'flex',

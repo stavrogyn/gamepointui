@@ -3,7 +3,7 @@ import { View, Text, Card, Button, TextField } from 'react-native-ui-lib';
 
 import { styles } from './styles';
 
-export class LoginScreen extends Component {
+export class AccountScreen extends Component {
   render() {
     return (
       <View flex padding-page style={{ flexDirection: 'column', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 30 }}>
