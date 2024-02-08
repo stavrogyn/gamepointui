@@ -1,16 +1,38 @@
 import React, { Component } from 'react';
-import { View, Text, Card } from 'react-native-ui-lib';
+import { View, Carousel } from 'react-native-ui-lib';
 
-import { styles } from './styles';
+type New = {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
 
-export class HomeScreen extends Component {
-  render() {
-    return (
-      <View flex padding-page style={{ flexDirection: 'column', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 30 }}>
-         <Card height={100} center padding-s4 marginB-s4>
-          <Text body>Some home screen staff</Text>
-        </Card>
-      </View>
-    );
-  }
+const news: New[] = [{
+  title: 'Gaming Shit In Podgorica',
+  description: 'Gaming lounge providing the use of high-end computers and consoles for recreation, education and work',
+  imageUrl: '../../assets/gamepointphoto.jpg'
+}, {
+  title: 'Gaming Shit In Podgorica',
+  description: 'Gaming lounge providing the use of high-end computers and consoles for recreation, education and work',
+  imageUrl: '../../assets/gamepointphoto.jpg'
+}, {
+  title: 'Gaming Shit In Podgorica',
+  description: 'Gaming lounge providing the use of high-end computers and consoles for recreation, education and work',
+  imageUrl: '../../assets/gamepointphoto.jpg'
+}, {
+  title: 'Gaming Shit In Podgorica',
+  description: 'Gaming lounge providing the use of high-end computers and consoles for recreation, education and work',
+  imageUrl: '../../assets/gamepointphoto.jpg'
+}, {
+  title: 'Gaming Shit In Podgorica',
+  description: 'Gaming lounge providing the use of high-end computers and consoles for recreation, education and work',
+  imageUrl: '../../assets/gamepointphoto.jpg'
+} ]
+
+export const HomeScreen = () => {
+  return (
+    <View flex padding-page style={{ flexDirection: 'column', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 30 }}>
+      kek
+    </View>
+  );
 }
